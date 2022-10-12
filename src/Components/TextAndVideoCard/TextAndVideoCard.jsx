@@ -1,10 +1,16 @@
 import React from "react";
 
 const TextAndVideoCard = ({ content }) => {
-  console.log(content);
+  const { title, text, cta_1, video } = content;
   return (
     <section>
-      <h2>{content.title}</h2>
+      <div>
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <a className="button" href={cta_1.url}>
+          {cta_1.text}
+        </a>
+      </div>
     </section>
   );
 };
