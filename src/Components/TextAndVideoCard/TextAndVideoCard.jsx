@@ -1,5 +1,5 @@
 import React from "react";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import MutedLoopingVideo from "../MutedLoopingVideo/MutedLoopingVideo";
 
 import CardStyles from "./TextAndVideoCard.module.scss";
 
@@ -26,7 +26,7 @@ const TextAndVideoCard = ({ content }) => {
           {cta_1.text}
         </a>
       </div>
-      <VideoPlayer sources={sources} className={CardStyles.videoWrapper} />
+      <MutedLoopingVideo sources={sources} className={CardStyles.videoWrapper} />
     </section>
   );
 };

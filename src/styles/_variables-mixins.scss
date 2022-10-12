@@ -5,6 +5,9 @@ $wintergreen: #6b9080;
 $moss: #a4c3b2;
 $overcast: #eaf4f4;
 
+$heading-font: 'League Spartan';
+$body-font: 'Libre Baskerville';
+
 /* MEDIA QUERY BREAKPOINTS */
 @mixin break($breakpoint) {
   @if $breakpoint=='mobile-small' {
