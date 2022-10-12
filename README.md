@@ -3,12 +3,11 @@ Inside this repo is my submission for a technical assessment. I was tasked with 
 
 To preview my work, you can clone this repo onto your computer and follow the directions below provided by create-react-app. Here's also a quick command line process:
 
-1. git clone REPO_LINK
+1. git clone https://github.com/Fourbn/luminous-green-elephant.git
 2. cd luminous-green-elephant
 3. npm start
 
 If you are looking to host this app online, use the command 'npm run build' when connecting it to your hosting service of choice.
-
 
 ## Getting Started with Create React App
 
