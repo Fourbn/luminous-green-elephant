@@ -1,6 +1,8 @@
 import React from "react";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
+import CardStyles from "./TextAndVideoCard.module.scss";
+
 const TextAndVideoCard = ({ content }) => {
   const { title, text, cta_1, video } = content;
 
@@ -16,15 +18,15 @@ const TextAndVideoCard = ({ content }) => {
   ];
 
   return (
-    <section>
-      <div>
+    <section className={CardStyles.card}>
+      <div className={CardStyles.textWrapper}>
         <h2>{title}</h2>
         <p>{text}</p>
         <a className="button" href={cta_1.url}>
           {cta_1.text}
         </a>
       </div>
-      <VideoPlayer sources={sources} />
+      <VideoPlayer sources={sources} className={CardStyles.videoWrapper} />
     </section>
   );
 };

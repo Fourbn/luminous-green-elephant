@@ -1,7 +1,19 @@
 import { useEffect, useState } from "react";
+import WebFont from "webfontloader";
 import TextAndVideoCard from "./Components/TextAndVideoCard/TextAndVideoCard";
 
+import "./styles/global.scss";
+import AppStyles from "./App.module.scss";
+
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['League Spartan', 'Libre Baskerville']
+      }
+    })
+  }, [])
+
   const endpoint =
     "https://www.lightspeedhq.com/wp-json/lexic/v1/btf_hero_module/btf_hero_module/";
   const [appData, setAppData] = useState();
@@ -18,11 +30,13 @@ function App() {
   }, [endpoint]);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="wrapper">
+      <header className={AppStyles.header}>
         <h1>Luminous Green Elephant</h1>
-        {appData && <TextAndVideoCard content={appData} />}
       </header>
+      <main>
+        {appData && <TextAndVideoCard content={appData} />}
+      </main>
     </div>
   );
 }
