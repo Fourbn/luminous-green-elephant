@@ -1,7 +1,20 @@
 import React from "react";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const TextAndVideoCard = ({ content }) => {
   const { title, text, cta_1, video } = content;
+
+  const sources = [
+    {
+      src: video.webm_url,
+      type: "video/webm",
+    },
+    {
+      src: video.mp4_url,
+      type: "video/mp4",
+    },
+  ];
+
   return (
     <section>
       <div>
@@ -11,6 +24,7 @@ const TextAndVideoCard = ({ content }) => {
           {cta_1.text}
         </a>
       </div>
+      <VideoPlayer sources={sources} />
     </section>
   );
 };
